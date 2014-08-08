@@ -1,0 +1,37 @@
+.lister {
+	margin-top: 1em;
+};
+
+.sample {
+	visibility: hidden;
+}
+
+.filled {
+	color:#E8EABB;
+}
+
+.rated {
+	color:#EE4444;
+}
+
+.template {
+    visibility: hidden;
+    position: absolute;
+    text-indent: -9999em;
+}
+
+.fires {
+	display:inline-block;
+	margin: auto 1em;
+}
+
+.fire {
+	font-size: 28px;
+	vertical-align: middle;
+}
+
+
+.phantom {
+	color:#AAAAAA;
+	font-size: 24px;
+}
