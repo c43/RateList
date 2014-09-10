@@ -2122,6 +2122,11 @@ th {
 .table-hover > tbody > tr:hover > th {
   background-color: #f5f5f5;
 }
+
+#items > tbody > tr:hover > span.delRow {
+color:#000;
+}
+
 table col[class*="col-"] {
   position: static;
   float: none;

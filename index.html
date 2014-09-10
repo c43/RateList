@@ -21,32 +21,32 @@
             </div>
         </nav>
         <div class="content">
-            <h1>RateList - Store your rated list... mnnnh.. NOW!</h1>
+            <h1>RateList - Create a list of rated items</h1>
             <p>
-                Enter items and with a rating, we'll manage the rest.   
+                Enter items and rate them, we'll manage the list.   
             </p>
 
             <form action="">
-                <label for="firstItemName">Add New Item Here:&nbsp;</label>
+                <label for="firstItemName">Name it:&nbsp;</label>
                 <input autofocus="autofocus" type="text" name="firstItemName" id="firstItemName"/>
-
-                <div class="fires">
+                <div class="fires" name="fires">
+                <!-- clones sample table and populates td's with form info, then appends to master table -->
+                    <label for="fires">Rate it:&nbsp;</label>
                     <div class="fire glyphicon glyphicon-fire"></div>
                     <div class="fire glyphicon glyphicon-fire"></div>
                     <div class="fire glyphicon glyphicon-fire"></div>
                     <div class="fire glyphicon glyphicon-fire"></div>
                     <div class="fire glyphicon glyphicon-fire"></div>
                 </div>
-                <!-- clones sample table and populates td's with form info, then appends to master table -->
-                <button type="submit" class="btn btn-danger clone"><span class="glyphicon glyphicon-save"></span>&nbsp;Add!</button>
+                
             </form>
             
             <!-- hardcoded master table with headers and empty body -->
             <table class="lister table table-striped table-bordered table-condensed table-hover" id="items">
             	<thead>
-            		<th class="col-md-6">Name</th>
-            		<th class="col-md-5">Rating</th>
-                    <th class="col-md-1"><div class="row" style="font-size:20px;"><span class="col-md-3 col-md-offset-1 glyphicon glyphicon-edit"></span><span class="col-md-3 col-md-offset-1 glyphicon glyphicon-trash"></span><div></th>
+            		<th class="col-md-7">Name</th>
+            		<th class="col-md-4">Rating</th>
+                    <th class="col-md-1"><div class="row" style="font-size:20px;text-align:center"><span class="glyphicon glyphicon-trash"></span></div></th>
             	</thead>
             	<tbody>
             	</tbody>
@@ -55,7 +55,7 @@
             <!-- empty sample table, td's will be cloned by submit button and added to master table -->
             <table class="template">
         <tr>
-            <td class="itemText"></td>
+            <td contenteditable="true" class="itemText"></td>
             <td class="rating">
                 <span class="fire glyphicon glyphicon-fire"></span>
                 <span class="fire glyphicon glyphicon-fire"></span>
@@ -63,7 +63,7 @@
                 <span class="fire glyphicon glyphicon-fire"></span>
                 <span class="fire glyphicon glyphicon-fire"></span>
             </td>
-            <td><div class="row"><span class="col-md-3 col-md-offset-1 glyphicon glyphicon-edit phantom"></span><span class="col-md-3 col-md-offset-1 glyphicon glyphicon-trash phantom"></span><div>
+            <td style="text-align:center;"><span class="glyphicon glyphicon-trash delRow"></span></td>
         </tr>
     </table>
         </div>

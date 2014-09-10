@@ -7,7 +7,7 @@
 }
 
 .filled {
-	color:#E8EABB;
+	color:;
 }
 
 .rated {
@@ -30,8 +30,19 @@
 	vertical-align: middle;
 }
 
+#items > tbody > tr:hover > .delRow {
+	color:#000;
+}
 
-.phantom {
-	color:#AAAAAA;
-	font-size: 24px;
+.delRow {
+	color:#AAA;
+	font-size:24px;
+}
+
+.delRow:hover {
+	color:#555;
+}
+
+.highlight {
+	color:#000;
 }
