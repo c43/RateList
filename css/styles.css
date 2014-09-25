@@ -1,3 +1,11 @@
+body {
+	font-size: 14pt;
+}
+
+input {
+	width:20em;
+}
+
 .lister {
 	margin-top: 1em;
 };
