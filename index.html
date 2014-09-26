@@ -43,19 +43,19 @@
             
             <!-- hardcoded master table with headers and empty body -->
             <table class="lister table table-striped table-bordered table-condensed table-hover" id="items">
-            	<thead>
-            		<th class="col-md-7">Name</th>
-            		<th class="col-md-4">Rating</th>
+                <thead>
+                    <th class="col-md-7">Name</th>
+                    <th class="col-md-4">Rating</th>
                     <th class="col-md-1"><div class="row" style="font-size:20px;text-align:center"><span class="glyphicon glyphicon-trash"></span></div></th>
-            	</thead>
-            	<tbody>
-            	</tbody>
+                </thead>
+                <tbody>
+                </tbody>
             </table>
             
             <!-- empty sample table, td's will be cloned by submit button and added to master table -->
             <table class="template">
         <tr>
-            <td contenteditable="true" class="itemText" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."> </td>
+            <td contenteditable="true" class="itemText" rel="popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="You didn't name this one! That's okay, just change the name when you feel like it."> </td>
             <td class="rating">
                 <span class="fire glyphicon glyphicon-fire"></span>
                 <span class="fire glyphicon glyphicon-fire"></span>
