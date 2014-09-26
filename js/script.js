@@ -1,6 +1,6 @@
 $(function() {
 
-	$('.itemText').popover([rel="popover"]);
+	$('.itemText').popover();
 
 	$('.fires .fire').hover(
 		function(){
@@ -73,6 +73,7 @@ function processNewItem() {
 	$('#firstItemName').val("").focus();
 }
 
+
 function addItem(text, rating, color) {
     $('.template tr').clone().hide().appendTo('#items tbody').fadeIn();
     $('#items tbody tr:last-child td.itemText').text(text).css("color", color);
@@ -85,12 +86,17 @@ function addItem(text, rating, color) {
     $('#firstItemName').focus();
 }
 
+
 //triggers popover if no name is entered for list item
 function noItemName(text) {
 	if (text == "") {
-		$('.itemText').popover('show');
-	}
+		$('#items tbody tr:last-child td.itemText').popover('show')
+		setTimeout(function(){
+		$('.itemText').popover('destroy')
+		}, 3000);
+	};
 }
+
 
 
 
