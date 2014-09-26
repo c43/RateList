@@ -22,7 +22,7 @@
         </nav>
         <div class="content">
             <h1>RateList - Create a list of rated items</h1>
-            <p>
+            <p style="padding-bottom:10px">
                 Enter items and rate them, we'll manage the list.   
             </p>
 
@@ -32,30 +32,30 @@
                 <div class="fires" name="fires">
                 <!-- clones sample table and populates td's with form info, then appends to master table -->
                     <label for="fires">Rate it:&nbsp;</label>
-                    <div class="fire glyphicon glyphicon-fire"></div>
-                    <div class="fire glyphicon glyphicon-fire"></div>
-                    <div class="fire glyphicon glyphicon-fire"></div>
-                    <div class="fire glyphicon glyphicon-fire"></div>
-                    <div class="fire glyphicon glyphicon-fire"></div>
+                    <div class="fire glyphicon glyphicon-fire action"></div>
+                    <div class="fire glyphicon glyphicon-fire action"></div>
+                    <div class="fire glyphicon glyphicon-fire action"></div>
+                    <div class="fire glyphicon glyphicon-fire action"></div>
+                    <div class="fire glyphicon glyphicon-fire action"></div>
                 </div>
                 
             </form>
             
             <!-- hardcoded master table with headers and empty body -->
             <table class="lister table table-striped table-bordered table-condensed table-hover" id="items">
-            	<thead>
-            		<th class="col-md-7">Name</th>
-            		<th class="col-md-4">Rating</th>
+                <thead>
+                    <th class="col-md-7">Name</th>
+                    <th class="col-md-4">Rating</th>
                     <th class="col-md-1"><div class="row" style="font-size:20px;text-align:center"><span class="glyphicon glyphicon-trash"></span></div></th>
-            	</thead>
-            	<tbody>
-            	</tbody>
+                </thead>
+                <tbody>
+                </tbody>
             </table>
             
             <!-- empty sample table, td's will be cloned by submit button and added to master table -->
             <table class="template">
         <tr>
-            <td contenteditable="true" class="itemText"></td>
+            <td contenteditable="true" class="itemText" rel="popover" data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="focus" data-content="You didn't name this one! That's okay, just change the name when you feel like it."> </td>
             <td class="rating">
                 <span class="fire glyphicon glyphicon-fire"></span>
                 <span class="fire glyphicon glyphicon-fire"></span>
@@ -63,7 +63,7 @@
                 <span class="fire glyphicon glyphicon-fire"></span>
                 <span class="fire glyphicon glyphicon-fire"></span>
             </td>
-            <td style="text-align:center;"><span class="glyphicon glyphicon-trash delRow"></span></td>
+            <td style="text-align:center;"><span class="glyphicon glyphicon-trash deleteRow"></span></td>
         </tr>
     </table>
         </div>

@@ -1,5 +1,6 @@
 $(function() {
 
+	$('.itemText').popover([rel="popover"]);
 
 	$('.fires .fire').hover(
 		function(){
@@ -64,28 +65,40 @@ function colorRating(obj) {
 }
 
 
-function trashItem() {
-	$('#items').on('click', function(event){
-		var t = event.target;
-		if($(t).hasClass('delRow')){
-			$(t).closest('tr').fadeOut(200);
-		}
-	});
-}
-
 function processNewItem() {
 	var text = $('#firstItemName').val();
 	var rating = $('.fires .filled').length;
 	var color = $('.filled').css("color");
 	addItem(text,rating,color);
+	$('#firstItemName').val("").focus();
 }
 
-function addItem(text,rating, color) {
+function addItem(text, rating, color) {
     $('.template tr').clone().hide().appendTo('#items tbody').fadeIn();
-    $('#items tbody tr:last-child td.itemText').text(text);
+    $('#items tbody tr:last-child td.itemText').text(text).css("color", color);
     var newRating = $('#items tbody tr:last-child td.rating .fire');
-    //rating - 2 because the label is included in the .fires .filled class, causing an extra element in the .length
+    //using rating - 2 because the label is included in the .fires .filled class, causing an extra element to be calculated in the length
     for(var i = rating - 2; i >= 0; i--) {
         $(newRating[i]).css("color",color)
     }
+    noItemName(text);
+    $('#firstItemName').focus();
+}
+
+//triggers popover if no name is entered for list item
+function noItemName(text) {
+	if (text == "") {
+		$('.itemText').popover('show');
+	}
+}
+
+
+
+function trashItem() {
+	$('#items').on('click', function(event){
+		var t = event.target;
+		if($(t).hasClass('deleteRow')){
+			$(t).closest('tr').fadeOut(200);
+		}
+	});
 }
