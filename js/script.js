@@ -1,6 +1,6 @@
 $(function() {
 
-	$('.itemText').popover();
+	$('.itemText').popover([rel="popover"]);
 
 	$('.fires .fire').hover(
 		function(){
@@ -81,15 +81,16 @@ function addItem(text, rating, color) {
     for(var i = rating - 2; i >= 0; i--) {
         $(newRating[i]).css("color",color)
     }
-    // noItemName(text);
+    noItemName(text);
+    $('#firstItemName').focus();
 }
 
 //triggers popover if no name is entered for list item
-// function noItemName(text) {
-// 	if (text.text() == "") {
-// 		$('.itemText').popover('show');
-// 	}
-// }
+function noItemName(text) {
+	if (text == "") {
+		$('.itemText').popover('show');
+	}
+}
 
 
 
@@ -98,7 +99,6 @@ function trashItem() {
 		var t = event.target;
 		if($(t).hasClass('deleteRow')){
 			$(t).closest('tr').fadeOut(200);
-		$('#firstItemName').focus();
 		}
 	});
 }
