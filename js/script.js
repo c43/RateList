@@ -90,9 +90,10 @@ function addItem(text, rating, color) {
 //triggers popover if no name is entered for list item
 function noItemName(text) {
 	if (text == "") {
-		$('#items tbody tr:last-child td.itemText').popover('show')
+		var entry = $('#items tbody tr:last-child td.itemText')
+		entry.popover('show');
 		setTimeout(function(){
-		$('.itemText').popover('destroy')
+		entry.popover('destroy')
 		}, 3000);
 	};
 }
